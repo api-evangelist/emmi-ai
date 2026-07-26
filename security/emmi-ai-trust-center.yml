@@ -1,0 +1,23 @@
+generated: '2026-07-19'
+method: searched
+source: https://emmi.ai/security-compliance
+url: https://emmi.ai/security-compliance
+certifications:
+- SOC 2 Type 2
+compliance:
+- GDPR
+controls:
+- Encryption at rest and in transit
+- Role-based access controls
+- Data ownership and retention
+- Secure deletion on request
+contacts:
+  security: security@emmi.ai
+  privacy: privacy@emmi.ai
+evidence:
+- source: https://emmi.ai/security-compliance
+  keywords: [soc 2 type 2, gdpr, encryption, role-based access]
+notes: >-
+  Security & Compliance page states SOC 2 Type 2 certification and full GDPR
+  compliance. No ISO 27001, PCI DSS, HIPAA, FedRAMP, or dedicated responsible
+  disclosure policy found on the page.

@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: searched
+source: https://noether-docs.emmi.ai/
+name: Noether CLI
+description: >-
+  Command-line toolchain shipped with the emmiai-noether Python package for
+  scaffolding projects and training, evaluating, and managing Engineering AI
+  models via YAML configuration files. Supports local CPU/GPU/Apple Silicon and
+  SLURM cluster / submitit job submission.
+install:
+- method: pypi
+  command: pip install emmiai-noether
+- method: uv
+  command: uv pip add emmiai-noether
+commands:
+- name: noether-init
+  group: project
+  description: Scaffold a new Noether project from a template (project initialization).
+- name: noether-train
+  group: training
+  description: Train an Engineering AI model from a YAML config or a DomainPreset; supports SLURM validation and launching.
+- name: noether-inference
+  group: inference
+  description: Run evaluation / inference with a trained model checkpoint.
+key_flows:
+- Scaffold a project with noether-init, then train a preset model with noether-train.
+- Validate and launch SLURM jobs from the CLI (submitit-based job submission).
+- Run the AB-UPT showcase on DrivAerML via the preset-based CLI across CPU/GPU/Apple Silicon.
+notes: >-
+  CLI entry points confirmed across the docs navigation (main_train, main_inference
+  CLI modules) and release notes (noether-init added in v2.0.0; development CLI and
+  submitit job submission in v2026.4.0). The CLI binary is distributed inside the
+  packages/ Python package.

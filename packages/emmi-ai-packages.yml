@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: searched
+source: https://pypi.org/project/emmiai-noether/
+packages:
+- language: python
+  registry: pypi
+  name: emmiai-noether
+  version: 2026.4.0
+  url: https://pypi.org/project/emmiai-noether/
+  install: pip install emmiai-noether
+  summary: 'Noether: A PyTorch-based Framework for Engineering AI'
+  requires_python: '>=3.12'
+  license: LicenseRef-ENPL
+  source_repo: https://github.com/Emmi-AI/noether
+  docs: https://noether-docs.emmi.ai/
+  official: true
+  notes: >-
+    Non-Production License (ENPL) - research/development use is permitted; a
+    commercial license from Emmi AI is required for production deployment.
+    Also installable via uv (uv pip add emmiai-noether).

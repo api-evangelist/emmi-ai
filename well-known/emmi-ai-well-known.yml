@@ -1,0 +1,12 @@
+generated: '2026-07-19'
+method: searched
+host: https://emmi.ai
+documents:
+- path: /.well-known/security.txt
+  status: 404
+- path: /.well-known/openid-configuration
+  status: 404
+notes: >-
+  No /.well-known discovery documents were served by emmi.ai at probe time.
+  Emmi AI publishes no hosted HTTP API, so OAuth/OIDC discovery endpoints are
+  not expected. Absence is valid, expected data.

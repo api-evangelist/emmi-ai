@@ -1,0 +1,42 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/Emmi-AI/noether/releases
+subject: Noether framework (emmiai-noether)
+scheme: mixed (semver through 2.0.0, calendar-based from 2026.4.0)
+current_version: 2026.4.0
+entries:
+- version: 2026.4.0
+  date: '2026-04-29'
+  breaking: true
+  highlights:
+  - Introduced calendar-based versioning.
+  - Improved AB-UPT baseline on DrivAerML via RoPE scaling and Muon optimizer.
+  - Four new recipes - AB-UPT showcase, heat transfer, Emmi-Wing HF subset, Aero CFD.
+  - High-level training API with DomainPreset encapsulation.
+  - AB-UPT supports untied physics blocks and arbitrary domains.
+  - submitit-based job submission, development CLI, EMA evaluation, profiling callback.
+  - Breaking changes to model checkpoints, configuration fields, and attention naming.
+- version: 2.0.0
+  date: '2026-03-27'
+  breaking: true
+  highlights:
+  - KV caching added to AB-UPT (breaking change).
+  - Attention mask support for padded token sequences.
+  - CLI tool for SLURM job validation and launching.
+  - noether-init command for project scaffolding.
+  - Training resumption without data reloading; signal handlers in BaseTrainer.
+- version: 1.1.0
+  date: '2026-02-10'
+  breaking: false
+  highlights:
+  - Trackio support integrated.
+  - torch-cluster and torch-scatter dependencies made optional.
+  - Documentation enhancements including clipboard copy.
+- version: 1.0.0
+  date: '2026-01-27'
+  breaking: false
+  highlights:
+  - Initial stable release of the Noether Engineering AI framework.
+  - Model zoo including AB-UPT and UPT variants.
+  - Datasets AhmedML, DrivAerML, DrivAerNet++, Emmi-Wing.
+  - Configuration-driven experiment system and extensible APIs.
