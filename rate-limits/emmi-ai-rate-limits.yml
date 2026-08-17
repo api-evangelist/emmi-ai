@@ -1,0 +1,27 @@
+generated: '2026-08-17'
+method: searched
+source: https://noether-docs.emmi.ai/
+limit_count: 0
+limits: []
+response_headers: []
+exhaustion_status: null
+applicable: false
+detail: >-
+  Emmi AI publishes no HTTP API, so there is no runtime rate-limit signal to
+  record. The product surface is the emmiai-noether Python package, its CLI
+  (noether-init / noether-train / noether-inference) and the Sphinx
+  documentation; all execution is local or on the customer's own CPU/GPU/SLURM
+  hardware. No api., app., platform., console. or mcp. host resolves under
+  emmi.ai, and the documentation contains no request-quota, throttling or
+  Retry-After guidance.
+evidence:
+- url: https://noether-docs.emmi.ai/sitemap.xml
+  status: 200
+  note: 51 non-autoapi doc pages walked; no rate-limit, quota or throttling page
+- url: https://emmi.ai/api
+  status: 404
+- url: https://emmi.ai/developers
+  status: 404
+notes: >-
+  limit_count is 0 because there is no API to limit - an honest zero recorded
+  after probing, not an undocumented limit.

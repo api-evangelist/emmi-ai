@@ -1,0 +1,34 @@
+generated: '2026-08-17'
+method: searched
+source: https://github.com/Emmi-AI/noether/blob/main/AGENTS.md
+note: >-
+  Emmi AI publishes a first-party AGENTS.md in the Noether framework repository.
+  It is saved here VERBATIM (no edits, no added frontmatter) because it is the
+  provider's own text. Scope matters and is recorded honestly: this is a
+  repository-contributor agent guide - how a coding agent should build, test,
+  lint, type-check and document changes to the Noether codebase - not an
+  API-usage skill. Emmi AI publishes no HTTP API, so there are no operationIds
+  to ground an API operating skill in and none were generated. CLAUDE.md in the
+  same repository is a one-line pointer at AGENTS.md.
+skills:
+- file: emmi-ai-noether-AGENTS.md
+  name: Noether framework contributor agent guide
+  kind: AGENTS.md
+  scope: repository-contribution
+  api: null
+  operations: []
+  published_by: Emmi AI
+  source: https://raw.githubusercontent.com/Emmi-AI/noether/main/AGENTS.md
+  human_url: https://github.com/Emmi-AI/noether/blob/main/AGENTS.md
+  method: searched
+  fetched: '2026-08-17'
+  http_status: 200
+  covers:
+  - uv-managed project setup (always `uv run` for Python commands)
+  - pytest testing conventions (tests/, coverage via `uv run pytest --cov=src`)
+  - ruff formatting and linting
+  - mypy type checking of src/
+  - Google/NumPy-style docstrings with Sphinx testcode examples
+  - Sphinx documentation updates under docs/ on any functional change
+related:
+- https://github.com/Emmi-AI/noether/blob/main/CLAUDE.md

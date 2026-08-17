@@ -1,9 +1,20 @@
-generated: '2026-07-19'
+generated: '2026-08-17'
 method: searched
 source: https://github.com/Emmi-AI/noether/releases
+also_source: https://github.com/Emmi-AI/noether/blob/main/CHANGELOG.md
 subject: Noether framework (emmiai-noether)
 scheme: mixed (semver through 2.0.0, calendar-based from 2026.4.0)
 current_version: 2026.4.0
+current_version_released: '2026-04-29'
+last_checked: '2026-08-17'
+currency_note: >-
+  Re-checked 2026-08-17: 2026.4.0 is still the newest PyPI release (uploaded
+  2026-04-29) and the newest git tag (v2026.4.0) - no new version in ~3.5 months,
+  though the default branch keeps taking commits. Two source caveats worth
+  recording: the GitHub Releases API now returns an empty array for this
+  repository (the four versions exist as tags only), and the in-repo CHANGELOG.md
+  has not been regenerated past 2.0.0 (2026-03-27), so the 2026.4.0 entry below
+  is the only surviving structured capture of that release.
 entries:
 - version: 2026.4.0
   date: '2026-04-29'

@@ -1,0 +1,52 @@
+generated: '2026-08-17'
+method: searched
+source: https://emmi.ai/noether-framework
+plan_count: 0
+currency: null
+model: license + contact-sales
+detail: >-
+  Emmi AI publishes no priced plans, no tiers, and no pricing page - emmi.ai/pricing
+  and emmi.ai/plans both return 404 and no pricing appears anywhere in the site
+  navigation or footer. Commercial access is a conversation: the Noether framework
+  page ends with "For commercial deployments, enterprise support, custom model
+  development, or integration assistance, our team is here to help", routing to
+  https://emmi.ai/contact-us. What IS published is the licensing boundary, which
+  is the only cost-relevant term a reader can act on without talking to sales.
+license_tiers:
+- name: Emmi AI Non-Production License (ENPL)
+  price: 0
+  currency: EUR
+  billing_period: null
+  covers: >-
+    Use, modification and distribution of the Noether Framework for research and
+    development. Adapted by Emmi AI from Mistral AI's Non-Production License (MNPL),
+    which the licence text credits explicitly.
+  excludes: Production deployment
+  url: https://github.com/Emmi-AI/noether/blob/main/LICENSE.txt
+- name: Commercial licence
+  price: null
+  currency: null
+  billing_period: null
+  covers: >-
+    Production deployment of the Noether Framework, plus (per the framework page)
+    custom model training on proprietary datasets, enterprise support and SLAs,
+    integration with existing simulation pipelines, hardware performance
+    optimisation, and dedicated training and workshops.
+  how_to_obtain: https://emmi.ai/contact-us
+  published_price: false
+evidence:
+- url: https://emmi.ai/pricing
+  status: 404
+- url: https://emmi.ai/plans
+  status: 404
+- url: https://emmi.ai/noether-framework
+  status: 200
+- url: https://raw.githubusercontent.com/Emmi-AI/noether/main/LICENSE.txt
+  status: 200
+- url: https://pypi.org/pypi/emmiai-noether/json
+  status: 200
+  note: 'license classifier: LicenseRef-ENPL'
+notes: >-
+  plan_count is 0 because the provider genuinely publishes zero priced plans - an
+  honest zero, not an unfetched page. A buyer cannot self-serve at any price; the
+  free tier is a licence grant, not a plan.

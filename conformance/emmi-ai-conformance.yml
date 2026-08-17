@@ -1,0 +1,92 @@
+generated: '2026-08-17'
+method: searched
+source: https://emmi.ai/security-compliance
+scope: >-
+  Emmi AI ships no HTTP API, so the API-protocol standards below are recorded as
+  not-applicable rather than as failures. What can be asserted is the published
+  compliance posture, the open-source distribution conventions, and the machine
+  surfaces the company does and does not serve - each with a probed or quoted
+  evidence line.
+standards:
+- id: soc2-type2
+  conforms: true
+  evidence: >-
+    "Emmi AI is SOC 2 Type 2 certified" - https://emmi.ai/security-compliance.
+    Certification is asserted by the company; no report or auditor is named on the page.
+- id: gdpr
+  conforms: true
+  evidence: >-
+    "We are fully compliant with the General Data Protection Regulation (GDPR)" -
+    https://emmi.ai/security-compliance. Austrian company; a Data Protection Notice
+    and Imprint are published.
+- id: iso-27001
+  conforms: false
+  evidence: not claimed anywhere on https://emmi.ai/security-compliance
+- id: pci-dss
+  conforms: false
+  evidence: not applicable - no payment surface
+- id: hipaa
+  conforms: false
+  evidence: not claimed; industrial engineering, no health data surface
+- id: fedramp
+  conforms: false
+  evidence: not claimed
+- id: content-signals
+  conforms: true
+  evidence: >-
+    https://emmi.ai/robots.txt (HTTP 200) serves a Cloudflare-managed
+    Content-Signal declaration - "search=yes,ai-train=no,use=reference" - and
+    asserts it as an express reservation of rights under Article 4 of EU Directive
+    2019/790. Nine AI crawlers are named and disallowed. Saved verbatim at
+    well-known/emmi-ai-robots.txt.
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: https://emmi.ai/.well-known/security.txt returned 404 on 2026-08-17
+- id: agents-md
+  conforms: true
+  evidence: >-
+    https://github.com/Emmi-AI/noether/blob/main/AGENTS.md (HTTP 200) - a
+    first-party agent instruction file, saved verbatim at
+    skills/emmi-ai-noether-AGENTS.md. CLAUDE.md defers to it.
+- id: semver
+  conforms: partial
+  evidence: >-
+    Semantic versioning through v2.0.0, then a switch to calendar versioning at
+    v2026.4.0 on the same tag series - see lifecycle/emmi-ai-lifecycle.yml.
+- id: conventional-commits
+  conforms: true
+  evidence: >-
+    CHANGELOG.md is generated in Conventional-Commits / release-please form with
+    explicit BREAKING CHANGES sections per release.
+- id: pep-440-pypi
+  conforms: true
+  evidence: >-
+    emmiai-noether published to PyPI with requires_python ">=3.12" and a
+    LicenseRef-ENPL classifier.
+- id: openapi
+  conforms: false
+  evidence: >-
+    Not applicable - no OpenAPI, Swagger, GraphQL SDL, AsyncAPI or Postman
+    collection is published; no API host resolves under emmi.ai. See x-coverage.
+- id: oauth2
+  conforms: false
+  evidence: not applicable - no hosted API, no authorization server
+    (/.well-known/oauth-authorization-server 404)
+- id: oidc
+  conforms: false
+  evidence: not applicable (/.well-known/openid-configuration 404 on emmi.ai and
+    noether-docs.emmi.ai)
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: not applicable - no HTTP error surface
+- id: a2a
+  conforms: false
+  evidence: /.well-known/agent-card.json and /.well-known/agent.json both 404 on
+    emmi.ai and noether-docs.emmi.ai
+- id: mcp
+  conforms: false
+  evidence: no MCP server published; no mcp.emmi.ai host resolves
+notes: >-
+  The published compliance programme (SOC 2 Type 2, GDPR) is carried separately by
+  security/emmi-ai-trust-center.yml and by the Compliance pointer in apis.yml. This
+  file adds the protocol- and distribution-level reading.

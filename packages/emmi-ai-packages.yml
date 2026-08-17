@@ -1,11 +1,27 @@
-generated: '2026-07-19'
+generated: '2026-08-17'
 method: searched
-source: https://pypi.org/project/emmiai-noether/
+source: https://pypi.org/pypi/emmiai-noether/json
+registries_checked:
+- registry: pypi
+  result: 1 first-party package (emmiai-noether)
+- registry: npm
+  result: none (emmi-ai, emmiai, @emmi-ai/sdk all 404; the npm "noether" package is unrelated third-party)
+- registry: crates.io
+  result: none first-party (the "noether" crate is an unrelated third-party abstract-algebra library)
+- registry: rubygems
+  result: none
+- registry: nuget
+  result: none
+- registry: maven-central
+  result: none
+- registry: pkg.go.dev
+  result: none
 packages:
 - language: python
   registry: pypi
   name: emmiai-noether
   version: 2026.4.0
+  published: '2026-04-29'
   url: https://pypi.org/project/emmiai-noether/
   install: pip install emmiai-noether
   summary: 'Noether: A PyTorch-based Framework for Engineering AI'
@@ -14,7 +30,16 @@ packages:
   source_repo: https://github.com/Emmi-AI/noether
   docs: https://noether-docs.emmi.ai/
   official: true
+  release_history:
+  - {version: 1.0.0, published: '2026-01-27'}
+  - {version: 1.1.0, published: '2026-02-10'}
+  - {version: 2.0.0, published: '2026-03-30'}
+  - {version: 2026.4.0, published: '2026-04-29'}
   notes: >-
-    Non-Production License (ENPL) - research/development use is permitted; a
-    commercial license from Emmi AI is required for production deployment.
-    Also installable via uv (uv pip add emmiai-noether).
+    Non-Production License (ENPL, adapted from Mistral AI's MNPL) - research and
+    development use is permitted; a commercial license from Emmi AI is required
+    for production deployment. Also installable via uv (uv pip add
+    emmiai-noether). CURRENCY: 2026.4.0 published 2026-04-29 is still the latest
+    release on PyPI and the latest git tag (v2026.4.0) as of the 2026-08-17
+    check - no new release in the intervening ~3.5 months, while the repository
+    default branch has continued to receive commits.

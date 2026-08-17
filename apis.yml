@@ -33,7 +33,7 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-19'
+modified: '2026-08-17'
 tags:
 - Company
 - Engineering AI
@@ -56,9 +56,9 @@ common:
 - type: Documentation
   url: https://noether-docs.emmi.ai/
 - type: APIReference
-  url: https://noether-docs.emmi.ai/
+  url: https://noether-docs.emmi.ai/autoapi/noether/index.html
 - type: GettingStarted
-  url: https://noether-docs.emmi.ai/
+  url: https://noether-docs.emmi.ai/tutorials/getting_started_install_and_verify.html
 - type: GitHubOrganization
   url: https://github.com/Emmi-AI
 - type: Blog
@@ -83,13 +83,51 @@ common:
   url: security/emmi-ai-trust-center.yml
 - type: Compliance
   url: https://emmi.ai/security-compliance
+- type: Lifecycle
+  url: lifecycle/emmi-ai-lifecycle.yml
+- type: Plans
+  url: plans/emmi-ai-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/emmi-ai-rate-limits.yml
+- type: Conformance
+  url: conformance/emmi-ai-conformance.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: ContentSignal
+  url: well-known/emmi-ai-robots.txt
+- type: SourceCode
+  url: https://github.com/Emmi-AI/noether
+- type: License
+  url: https://raw.githubusercontent.com/Emmi-AI/noether/main/LICENSE.txt
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
 x-enrichment:
-  date: '2026-07-19'
-  status: backfilled
+  date: '2026-08-17'
+  status: enriched
+  artifacts_added: 7
   pass: local-v1
-  note: backfilled from .gitignore signal + verified work evidence
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Emmi AI ships an open-source Python framework (emmiai-noether) and a CLI that
+    run on the customer's own CPU/GPU/SLURM hardware - there is no hosted service
+    and no API: no api./app./platform./console./mcp. host resolves under emmi.ai,
+    and every contract-discovery probe (openapi.json, agent-card.json, agent.json,
+    every /.well-known/ path on both emmi.ai and noether-docs.emmi.ai) returned
+    404 or NXDOMAIN.
+  evidence:
+  - url: https://emmi.ai/openapi.json
+    status: 404
+  - url: https://emmi.ai/.well-known/agent-card.json
+    status: 404
+  - url: https://noether-docs.emmi.ai/.well-known/agent.json
+    status: 404
+  - url: https://emmi.ai/api
+    status: 404
+  - url: https://pypi.org/pypi/emmiai-noether/json
+    status: 200
+  checked: '2026-08-17'

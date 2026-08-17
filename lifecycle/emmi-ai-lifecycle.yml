@@ -1,0 +1,66 @@
+generated: '2026-08-17'
+method: searched
+source: https://github.com/Emmi-AI/noether/blob/main/CHANGELOG.md
+subject: Noether framework (emmiai-noether) - Emmi AI ships no HTTP API, so the lifecycle
+  surface is the open-source Python package, not a versioned web API.
+versioning:
+  scheme: mixed
+  detail: >-
+    Semantic versioning through 2.0.0 (v1.0.0, v1.1.0, v2.0.0), then a switch to
+    calendar-based versioning at 2026.4.0. Both schemes appear as git tags on the
+    same repository, so a consumer pinning "^2.0.0" does not receive 2026.4.0.
+  current: 2026.4.0
+  current_released: '2026-04-29'
+  tags: [v1.0.0, v1.1.0, v2.0.0, v2026.4.0]
+  docs: https://github.com/Emmi-AI/noether/blob/main/CHANGELOG.md
+breaking_change_policy:
+  published_document: false
+  signalled_in_changelog: true
+  detail: >-
+    CHANGELOG.md is generated in Conventional-Commits / release-please form and
+    carries an explicit "BREAKING CHANGES" section per release (present on both
+    2.0.0 and 2026.4.0). There is no separate written policy stating notice
+    periods or support windows for a superseded version.
+deprecation:
+  policy_url: null
+  sunset_header: false
+  detail: >-
+    No deprecation policy, sunset schedule, or supported-version matrix is
+    published on the site, in the repository, or in the documentation. RFC 8594
+    Sunset/Deprecation headers are not applicable - there is no HTTP API.
+support_window:
+  published: false
+  detail: No published statement on how long any prior Noether release is supported.
+sla:
+  url: null
+  uptime_target: null
+  detail: >-
+    "Enterprise support and SLAs" is advertised as part of the commercial offer on
+    https://emmi.ai/noether-framework, but no SLA document, uptime target, or
+    support-response commitment is published - it is a contact-sales line item.
+status_page: null
+status_page_detail: >-
+  No status page exists and none is expected: Emmi AI operates no hosted service
+  for customers to check. Probed emmi.ai/status (404) and confirmed no
+  status./app./api. host resolves under emmi.ai.
+deprecated_operations: []
+evidence:
+- url: https://github.com/Emmi-AI/noether/blob/main/CHANGELOG.md
+  status: 200
+  note: BREAKING CHANGES sections per release; top entry 2.0.0 (2026-03-27)
+- url: https://pypi.org/pypi/emmiai-noether/json
+  status: 200
+  note: latest 2026.4.0, uploaded 2026-04-29
+- url: https://api.github.com/repos/Emmi-AI/noether/tags
+  status: 200
+  note: v2026.4.0, v2.0.0, v1.1.0, v1.0.0
+- url: https://api.github.com/repos/Emmi-AI/noether/releases
+  status: 200
+  note: empty array - the project tags releases but publishes no GitHub Release notes
+- url: https://emmi.ai/pricing
+  status: 404
+notes: >-
+  In-repo CHANGELOG.md has not been regenerated for the 2026.4.0 tag - its newest
+  entry is 2.0.0 (2026-03-27) while PyPI and git carry 2026.4.0 (2026-04-29). The
+  2026.4.0 detail captured in changelog/emmi-ai-changelog.yml was harvested from
+  the release notes published at the time.
