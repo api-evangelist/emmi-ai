@@ -1,15 +1,18 @@
 aid: emmi-ai
 deliveryModel:
-  model: unknown
+  model: saas
+  license_evidence:
+    not_product:
+    - emmi-ai/noether
   open_source: unknown
   commercial: true
   callable_host: false
-  label: Delivery model not determined — needs a product licence on record
+  label: Hosted service · you call their endpoint
   confidence: low
   source:
   - pricing
-  - repository-unlicensed
-  generated: '2026-08-28'
+  - repository-not-product
+  generated: '2026-09-25'
   method: derived
 accessModel:
   pricing: unknown
@@ -49,17 +52,20 @@ x-tier-reason: portfolio-lead
 specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-08-17'
+x-docs-platform: sphinx
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-10-03
 tags:
 - Company
 - Engineering AI
 - Physics Simulation
-- Machine-Learning
+- Machine Learning
 - Deep Learning
 - Scientific Computing
 - CAE
 - CFD
 - Manufacturing
-- Open-Source
+- Open Source
 tags_raw:
 - Company
 - Engineering AI
@@ -71,6 +77,8 @@ tags_raw:
 - CFD
 - Manufacturing
 - Open Source
+- Machine-Learning
+- Open-Source
 apis: []
 common:
 - type: DomainSecurity
